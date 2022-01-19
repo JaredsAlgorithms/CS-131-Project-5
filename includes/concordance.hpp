@@ -6,6 +6,7 @@
 #include <map>    /* std::multimap<T> and std::map<T> (not used) */
 #include <string> /* not needed for Mac OSX */
 #include <vector>
+#include <numeric>
 
 class StringLenCmp {
    public:
@@ -38,8 +39,6 @@ class concordance {
     void print(std::ostream&) const;  // TO DO
     template <typename T>
     void print(const std::vector<T>& v) const;
-    template <typename T>
-    void sanitizeVector(std::vector<T>& v) const;
 
     void readText(std::istream&, const std::string&);  // ALREADY DONE
     void findValsOfKey(std::vector<size_t>& v, const std::string& key) const;
